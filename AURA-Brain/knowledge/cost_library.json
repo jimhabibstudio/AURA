@@ -1,0 +1,144 @@
+{
+  "materials": {
+    "concrete": {
+      "unit": "m3",
+      "base_cost_usd": 110,
+      "co2_kg_per_unit": 220,
+      "thermal_conductivity": 1.7,
+      "lifespan_years": 100,
+      "structural_score": 9
+    },
+    "reinforced_steel": {
+      "unit": "kg",
+      "base_cost_usd": 0.85,
+      "co2_kg_per_unit": 2.1,
+      "lifespan_years": 75,
+      "structural_score": 10
+    },
+    "glass": {
+      "unit": "m2",
+      "base_cost_usd": 45,
+      "thermal_conductivity": 0.9,
+      "transparency": 0.95,
+      "co2_kg_per_unit": 50,
+      "lifespan_years": 40
+    },
+    "gypsum_board": {
+      "unit": "sheet",
+      "base_cost_usd": 12,
+      "fire_resistance": "medium",
+      "thermal_conductivity": 0.3,
+      "lifespan_years": 30
+    },
+    "ceramic_tile": {
+      "unit": "m2",
+      "base_cost_usd": 18,
+      "durability_score": 7,
+      "slip_resistance": "medium"
+    },
+    "laminate_wood": {
+      "unit": "m2",
+      "base_cost_usd": 25,
+      "eco_score": 0.6,
+      "durability_score": 6,
+      "lifespan_years": 20
+    },
+    "roof_metal_sheet": {
+      "unit": "m2",
+      "base_cost_usd": 22,
+      "lifespan_years": 30,
+      "thermal_rating": "low"
+    },
+    "roof_composite_shingle": {
+      "unit": "m2",
+      "base_cost_usd": 28,
+      "lifespan_years": 50,
+      "fire_resistance": "high"
+    },
+    "pvc_pipe": {
+      "unit": "meter",
+      "base_cost_usd": 2.5,
+      "pressure_rating": "medium",
+      "lifespan_years": 35
+    },
+    "solar_panel": {
+      "unit": "unit",
+      "base_cost_usd": 160,
+      "power_output_kw": 0.4,
+      "lifespan_years": 25,
+      "co2_offset_tonnes": 2.4
+    }
+  },
+  "labor": {
+    "architectural_design": {
+      "unit": "project",
+      "base_cost_usd": 1500,
+      "duration_days": 10
+    },
+    "site_labor": {
+      "unit": "hour",
+      "base_cost_usd": 15,
+      "efficiency_factor": 1.0
+    },
+    "electrician": {
+      "unit": "m2",
+      "base_cost_usd": 6,
+      "efficiency_factor": 0.9
+    },
+    "plumber": {
+      "unit": "point",
+      "base_cost_usd": 30,
+      "skill_level": "medium"
+    },
+    "mason": {
+      "unit": "m2_wall",
+      "base_cost_usd": 12,
+      "skill_level": "high"
+    }
+  },
+  "furniture": {
+    "standard_kitchen": {
+      "base_cost_usd": 1200,
+      "modularity": true,
+      "lifespan_years": 15
+    },
+    "wardrobe_unit": {
+      "base_cost_usd": 400,
+      "material": "plywood",
+      "lifespan_years": 12
+    }
+  },
+  "systems": {
+    "smart_lighting": {
+      "base_cost_usd": 800,
+      "ai_integration": true,
+      "power_savings_percent": 30
+    },
+    "hvac_split_unit": {
+      "base_cost_usd": 500,
+      "cooling_capacity_btuh": 12000,
+      "energy_rating": "A"
+    },
+    "basic_security_cctv": {
+      "base_cost_usd": 450,
+      "coverage_rooms": 3
+    }
+  },
+  "regional_multipliers": {
+    "Nigeria": 0.72,
+    "USA": 1.0,
+    "Germany": 1.22,
+    "India": 0.55,
+    "Brazil": 0.66,
+    "UAE": 1.3,
+    "UK": 1.25
+  },
+  "currency_conversion": {
+    "NGN": 1500,
+    "USD": 1,
+    "EUR": 0.92,
+    "INR": 83,
+    "BRL": 5.1,
+    "AED": 3.67
+  }
+}
