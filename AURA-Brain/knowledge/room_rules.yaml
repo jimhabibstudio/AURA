@@ -1,0 +1,97 @@
+# knowledge/room_rules.yaml
+# AURA - Architectural Room Intelligence Engine
+# Tesla x SpaceX Grade Spatial Reasoning
+
+global_constraints:
+  min_ceiling_height_m: 2.4
+  max_building_depth_m: 30
+  min_corridor_width_m: 1.0
+  min_door_width_m: 0.8
+  human_circulation_clearance_m: 0.9
+  daylight_access_required: ["Living", "Bedroom", "Kitchen", "Dining"]
+  wet_zones: ["Bathroom", "Toilet", "Kitchen", "Laundry"]
+  utility_zones: ["Garage", "Store", "Laundry"]
+  private_zones: ["Bedroom", "Bathroom"]
+  public_zones: ["Living", "Dining", "Kitchen"]
+
+room_definitions:
+  Living:
+    min_area_m2: 16
+    max_area_m2: 35
+    preferred_orientation: ["North", "East"]
+    access_from: ["Entrance", "Dining", "Corridor"]
+    avoid_next_to: ["Toilet", "Garage"]
+    must_connect_to: ["Dining"]
+    natural_light_required: true
+
+  Kitchen:
+    min_area_m2: 9
+    max_area_m2: 20
+    preferred_orientation: ["East", "South"]
+    access_from: ["Dining", "Corridor"]
+    must_connect_to: ["Dining", "Store"]
+    avoid_next_to: ["Toilet"]
+    natural_light_required: true
+
+  Bedroom:
+    min_area_m2: 10
+    max_area_m2: 25
+    preferred_orientation: ["East", "West"]
+    access_from: ["Corridor"]
+    must_connect_to: ["Bathroom"]
+    natural_light_required: true
+
+  Bathroom:
+    min_area_m2: 4
+    max_area_m2: 10
+    access_from: ["Corridor", "Bedroom"]
+    ventilation_required: true
+
+  Toilet:
+    min_area_m2: 2
+    access_from: ["Corridor"]
+    ventilation_required: true
+
+  Dining:
+    min_area_m2: 8
+    access_from: ["Kitchen", "Living"]
+    must_connect_to: ["Kitchen", "Living"]
+    natural_light_required: true
+
+  Garage:
+    min_area_m2: 12
+    avoid_next_to: ["Bedroom", "Living"]
+    access_from: ["Outside"]
+    ventilation_required: true
+
+  Balcony:
+    min_area_m2: 3
+    access_from: ["Living", "Bedroom"]
+    natural_light_required: true
+    ventilation_required: true
+
+  Office:
+    min_area_m2: 6
+    preferred_orientation: ["North"]
+    access_from: ["Corridor", "Living"]
+    natural_light_required: true
+
+  Store:
+    min_area_m2: 2
+    max_area_m2: 5
+    access_from: ["Kitchen", "Corridor"]
+    ventilation_required: false
+
+connectivity_matrix:
+  - from: "Living"
+    to: ["Dining", "Kitchen", "Corridor", "Entrance"]
+  - from: "Bedroom"
+    to: ["Bathroom", "Corridor"]
+  - from: "Kitchen"
+    to: ["Dining", "Store", "Corridor"]
+  - from: "Dining"
+    to: ["Living", "Kitchen"]
+  - from: "Garage"
+    to: ["Store", "Corridor"]
+  - from: "Balcony"
+    to: ["Living", "Bedroom"]
