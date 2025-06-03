@@ -1,0 +1,70 @@
+{
+  "Living": {
+    "Dining": 0.95,
+    "Kitchen": 0.85,
+    "Bedroom": 0.4,
+    "Bathroom": 0.1,
+    "Toilet": 0.15,
+    "Garage": 0.2,
+    "Store": 0.25,
+    "Balcony": 0.8,
+    "Office": 0.4
+  },
+  "Dining": {
+    "Kitchen": 0.98,
+    "Living": 0.95,
+    "Bedroom": 0.3,
+    "Bathroom": 0.05,
+    "Toilet": 0.1,
+    "Store": 0.2,
+    "Balcony": 0.6
+  },
+  "Kitchen": {
+    "Dining": 0.98,
+    "Living": 0.85,
+    "Store": 0.9,
+    "Toilet": 0.2,
+    "Garage": 0.35,
+    "Bathroom": 0.1
+  },
+  "Bedroom": {
+    "Bathroom": 0.9,
+    "Toilet": 0.85,
+    "Living": 0.4,
+    "Balcony": 0.5,
+    "Office": 0.6
+  },
+  "Bathroom": {
+    "Bedroom": 0.9,
+    "Toilet": 0.95,
+    "Living": 0.1,
+    "Kitchen": 0.1
+  },
+  "Toilet": {
+    "Bedroom": 0.85,
+    "Bathroom": 0.95,
+    "Kitchen": 0.2,
+    "Living": 0.15
+  },
+  "Garage": {
+    "Kitchen": 0.35,
+    "Store": 0.4,
+    "Living": 0.2,
+    "Office": 0.3
+  },
+  "Store": {
+    "Kitchen": 0.9,
+    "Garage": 0.4,
+    "Dining": 0.2
+  },
+  "Balcony": {
+    "Living": 0.8,
+    "Bedroom": 0.5,
+    "Dining": 0.6
+  },
+  "Office": {
+    "Bedroom": 0.6,
+    "Garage": 0.3,
+    "Living": 0.4
+  }
+}
