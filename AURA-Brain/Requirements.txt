@@ -1,0 +1,22 @@
+# UI & Web App
+streamlit>=1.25.0
+requests
+python-dotenv
+
+# Backend Parsing + Intelligence
+flask
+pydantic
+networkx
+pyyaml
+numpy
+scikit-learn
+beautifulsoup4
+lxml
+
+# Optional (for file parsing, visualization)
+matplotlib
+Pillow
+
+# Dev Tools (optional)
+black
+pytest
